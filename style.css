@@ -41,7 +41,8 @@ body {
   margin: 0;
   padding: 0px;
 }
-.list-item, .title {
+.list-item, 
+.title {
   list-style: none;
 }
 .task,
@@ -62,7 +63,7 @@ body {
 .btn:hover {
   color: #3a3a3a;
 }
-/* heading */
+/* каждый селектор с новой строки */
 .title,
 .add-field {
   color: #333;
@@ -106,32 +107,32 @@ adding-btn:hover {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.list-item > * {
+.list-item {
   vertical-align: middle;
 }
 
-.list-item > .task-checkbox {
+.list-item .task-checkbox {
   margin: 0 10px;
 }
-.list-item > label {
+.list-item .task, 
+.list-item .add-field {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-.list-item > .text-field {
+/*   ниже вложенные селекторы, поэтому начало не с новой строки */
+.list-item .text-field {
   width: 226px
 }
-.list-item > .delete-btn:hover {
+.list-item .delete-btn:hover {
   color: #cf2323;
 }
-
-/* оставила тег img, так как он принадлежит только delete-батОнам */
+/* оставила тег img, так как он принадлежит только delete-батoнам */
 .delete-btn img {
   height: 2em;
   transform: rotatez(45deg);
@@ -140,25 +141,18 @@ adding-btn:hover {
 .delete-btn img:hover {
   transform: rotatez(0);
 }
-
-/* completed */
+/* пришлось оставить тег лейб, чтобы не переиначивать JS */
 .task-list#completed-tasks label {
   text-decoration: line-through;
   color: #888;
 }
-
-/*  task */
-.task-list 
-.list-item 
-.text-field {
+.task-list .list-item .text-field {
   display: none;
 }
-
 .task-list .list-item.edit-mode .text-field {
   display: inline-block;
   width: 224px;
 }
-
 .task-list .list-item.edit-mode label {
   display: none;
 }
