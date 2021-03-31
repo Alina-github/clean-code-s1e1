@@ -151,12 +151,12 @@ adding-btn:hover {
 .task-list 
 .list-item 
 .text-field {
-  display: none
+  display: none;
 }
 
 .task-list .list-item.edit-mode .text-field {
   display: inline-block;
-  width: 224px
+  width: 224px;
 }
 
 .task-list .list-item.edit-mode label {
