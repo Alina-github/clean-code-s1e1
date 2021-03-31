@@ -14,12 +14,15 @@ body {
   width: 100%;
 }
 .matrix .matrix-info {
-  font-family: Fantasy, cursive;
+  font-family:Fantasy, cursive;
 }
 
 @media (max-width:768px) {
-.matrix { text-align: center;
-}
+
+  .matrix { 
+    text-align: center;
+  }
+
 }
 .main-content {
   display: block;
