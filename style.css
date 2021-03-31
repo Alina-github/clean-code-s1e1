@@ -13,7 +13,7 @@ body {
 .matrix img {
   width: 100%;
 }
-.matrix .matrix__info {
+.matrix .matrix-info {
   font-family: Fantasy, cursive;
 }
 
@@ -34,17 +34,18 @@ body {
 .task-row-wrapper {
   display: flex;
 }
-ul {
+.task-list {
   margin:0;
   padding: 0px;
 }
-li, h3 {
+.list-item, .title {
   list-style:none;
 }
-input,button{
+.task,
+.text-field {
   outline:none;
 }
-button {
+.btn {
   background: none;
   border: 0px;
   color: #888;
@@ -52,13 +53,15 @@ button {
   width: 60px;
   font-family: lato, sans-serif;
   cursor: pointer;
+  outline:none;
 }
-button:hover {
+
+.btn:hover {
   color: #3a3a3a;
 }
 /* heading */
-h3,
-label[for="new-task-input"] {
+.title,
+.add-field {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -67,7 +70,7 @@ label[for="new-task-input"] {
   margin: 0;
   text-transform: uppercase;
 }
-input[type="text"] {
+.text-field {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -79,16 +82,16 @@ input[type="text"] {
   font-family: lato, sans-serif;
   color: #888;
 }
-input[type="text"]:focus {
+.text-field:focus {
   color: #333;
 }
 
 /* new task */
-label[for="new-task-input"] {
+.add-field {
   display: block;
   margin: 0 0 20px;
 }
-input#new-task-input {
+#new-task-input {
   width: 318px;
 }
 adding-btn:hover {
@@ -96,7 +99,7 @@ adding-btn:hover {
 }
 
 /* task list */ 
-li {
+.list-item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -105,50 +108,54 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-li > * {
+.list-item > * {
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+.list-item > .task-checkbox {
   margin: 0 10px;
 }
-li > label {
+.list-item > label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-li >  input[type="text"] {
+.list-item > .text-field {
   width: 226px
 }
-li > button.delete-btn:hover {
+.list-item > .delete-btn:hover {
   color: #cf2323;
 }
-button.delete-btn img {
+
+/* оставила тег img, так как он принадлежит только delete-батОнам */
+.delete-btn img {
   height: 2em;
   transform: rotatez(45deg);
   transition: transform 200ms ease-in;
 }
-button.delete-btn img:hover {
+.delete-btn img:hover {
   transform: rotatez(0);
 }
 
 /* completed */
-ul#completed-tasks label {
-  text-decoration: line-through
+.task-list#completed-tasks label {
+  text-decoration: line-through;
   color: #888;
 }
 
 /*  task */
-ul li input[type=text] {
+.task-list 
+.list-item 
+.text-field {
   display:none
 }
 
-ul li.edit-mode input[type=text] {
+.task-list .list-item.edit-mode .text-field {
   display:inline-block;
   width:224px
 }
 
-ul li.edit-mode label {
+.task-list .list-item.edit-mode label {
   display:none;
 }
