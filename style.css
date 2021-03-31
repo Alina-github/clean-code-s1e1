@@ -4,24 +4,24 @@ body {
   color: #333;
   font-family: lato, sans-serif;
 }
-.aaa {
+.matrix {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
-.aaa img {
+.matrix img {
   width: 100%;
 }
-.aaa .more-inf {
-  font-family: fantasy, cursive;
+.matrix .matrix__info {
+  font-family: Fantasy, cursive;
 }
 
 @media (max-width:768px) {
-.aaa { text-align: center;
+.matrix { text-align: center;
 }
 }
-.centered-main-page-element {
+.main-content {
   display: block;
   width: 500px;
   margin: 0 auto 0;
@@ -91,11 +91,11 @@ label[for="new-task"] {
 input#new-task {
   width: 318px;
 }
-p > button:hover {
+adding-button:hover {
   color: #0fc57c;
 }
 
-/* task list */ ^
+/* task list */ 
 li {
   overflow: hidden;
   padding: 20px 0;
@@ -144,11 +144,11 @@ ul li input[type=text] {
   display:none
 }
 
-ul li.editmode input[type=text] {
+ul li.edit-mode input[type=text] {
   display:inline-block;
   width:224px
 }
 
-ul li.editmode label {
+ul li.edit-mode label {
   display:none;
 }
